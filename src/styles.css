@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+:root {
+  --MarkUptextColour: #29b229;
+  --DarkBackground: #141414;
+  --DarkHighlight: #2e2e2e;
+  --EditorFont: "Share Tech Mono";
+}
+/*TEXT STYLES*/
+
+h1{
+    font-size: 24px;
+}
+
+h2{
+    font-size: 16px;
+    color: white;
+}
+
+/* Page Set Up */
+
+#root{
+    height: 83vh;
+}
+
+header{
+    display: flex;
+    color: black;
+    flex-direction: row;
+    background-color:#c4c4c4;
+    width: 100vw;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    display: flex;
+    color: black;
+    background-color:#c4c4c4;
+    text-align: center;
+    width: 100vw;
+    height: 5vh;
+    align-items: center;
+    margin-top: 1vh;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    background-color: white;
+    margin-top: 1vh;
+    justify-content: space-between;
+    max-height: 83vh;
+}
+
+.left{
+    width: 49.5vw;
+    height: 100%;
+    max-height: 100%;
+}
+
+.right{
+    width: 49.5vw;
+    height: 100%;
+}
+
+.menu-bar{
+    width: 100%;
+    background-color: #4E4E4E;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    height: 4vh;
+    align-items: center;
+}
+
+.collapse-button{
+    background-color: #4E4E4E;
+    width: 40px;
+    height: 100%;
+    color: var(--MarkUptextColour);
+    border: none;
+}
+
+img{
+    height: 15px;
+    width: auto;
+}
+
+/*Editor Styles*/
+
+#editor {
+  background-color: var(--DarkBackground);
+  color: var(--MarkUptextColour);
+  font-family: var(--EditorFont);
+  border: none;
+  outline: none;
+  width: 98%;
+  max-width: 100%;
+  height: 79vh;
+  max-height: 79vh;
+  resize: none;
+  padding-left: 1%;
+  padding-right: 1%
+}
+#editor:hover {
+  background-color: var(--DarkHighlight);
+}
+#editor:focus {
+  background-color: var(--DarkHighlight);
+}
+
+textarea{
+    width: 100%;
+}
+
+/*Preview Styles*/
+#preview {
+  background-color: white;
+  width: 90%;
+  margin: 0;
+  padding-left: 1%;
+  padding-right: 1%;
+  overflow: scroll;
+  height: 79vh;
+  max-height: 79vh;
+}
+
+.colapsed button{
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.colapsed{
+    width: 4vw;
+    height: 83vh;
+}
+
+.colapsed h2{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.colapsed #editor{
+    display: none;
+}
+
+.colapsed #preview{
+    display: none;
+}
+
+.colapsed .menu-bar{
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.full{
+    width:95vw;
+}
+
+.colapsed img{
+    transform: rotate(45deg);
+}
